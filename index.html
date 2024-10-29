@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas de Salud</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo para los botones */
+        h1 {
+            font-weight: bolder;
+            font-variant: small-caps;
+            font-size: 48px;
+        }
+        .btn {
+            border: 3.5px solid transparent; /* Establece el borde inicialmente transparente */
+            border-radius: 13.5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar el ratón */
+            font-weight: bolder;
+            font-variant: small-caps;
+        }
+        .btn-primary {
+            border-color: black; /* Color del borde para el botón primario */
+        }
+        .btn-success {
+            border-color: black; /* Color del borde para el botón de éxito */
+        }
+        .btn-danger {
+            border-color: black; /* Color del borde para el botón de peligro */
+        }
+        .btn-info {
+            border-color: black; /* Color del borde para el botón de información */
+        }
+        .btn-warning {
+            border-color: black; /* Color del borde para el botón de advertencia */
+        }
+        .btn-secondary {
+            border-color: black; /* Color del borde para el botón secundario */
+        }
+        .btn-light {
+            border-color: black; /* Color del borde para el botón claro */
+        }
+        .btn-dark {
+            border-color: black; /* Color del borde para el botón oscuro */
+        }
+        .btn-tercery {
+            border-color: black; /* Color del borde para el botón primario */
+        }
+
+        /* Estilo para los botones de monitoreo */
+        .EscalaCY-BOCSASD {
+            background-color: #FF5733; /* Color de fondo personalizado */
+            color: white; /* Color del texto */
+            border-color: black; /* Color del borde para el botón primario */
+
+        }
+
+        .EscalaCY-BOCSASD:hover {
+            background-color: #C70039; /* Color de fondo al pasar el ratón */
+            border-color: #C70039; /* Color del borde al pasar el ratón */
+        }
+
+        .EscalaY-BOCS {
+            background-color: #ff0040; /* Color de fondo personalizado */
+            color: white; /* Color del texto */
+            border-color: black; /* Color del borde para el botón primario */
+        }
+
+        .EscalaY-BOCS:hover {
+            background-color: #C70039; /* Color de fondo al pasar el ratón */
+            border-color: #C70039; /* Color del borde al pasar el ratón */
+        }
+
+        .EscalaBAT {
+            background-color: #ca0000; /* Color de fondo personalizado */
+            color: white; /* Color del texto */
+            border-color: black; /* Color del borde para el botón primario */
+        }
+
+        .EscalaBAT:hover {
+            background-color: #C70039; /* Color de fondo al pasar el ratón */
+            border-color: #C70039; /* Color del borde al pasar el ratón */
+        }
+
+        .EscalaOVI {
+            background-color: #a00185; /* Color de fondo personalizado */
+            color: white; /* Color del texto */
+            border-color: black; /* Color del borde para el botón primario */
+        }
+
+        .EscalaOVI:hover {
+            background-color: #C70039; /* Color de fondo al pasar el ratón */
+            border-color: #C70039; /* Color del borde al pasar el ratón */
+        }
+
+        .DeteccionTumor {
+            background-color: #008528; /* Color de fondo personalizado */
+            color: white; /* Color del texto */
+            border-color: black; /* Color del borde para el botón primario */
+        }
+
+        .DeteccionTumor:hover {
+            background-color: #C70039; /* Color de fondo al pasar el ratón */
+            border-color: #C70039; /* Color del borde al pasar el ratón */
+        }
+
+        .Pruebas-AutoSum {
+            background-color: #0004ff; /* Color de fondo personalizado */
+            color: rgb(255, 255, 255); /* Color del texto */
+            border-color: black; /* Color del borde para el botón primario */
+        }
+
+        .Pruebas-AutoSum:hover {
+            background-color: #C70039; /* Color de fondo al pasar el ratón */
+            border-color: #C70039; /* Color del borde al pasar el ratón */
+        }
+
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-center text-primary mb-4"><i class="fas fa-heartbeat"></i> Herramientas de Salud</h1>
+        <p class="text-center text-muted">Seleccione una herramienta para calcular su estado de salud.</p>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <a href="bmi-calculator/bmi.html" class="btn btn-primary w-100 py-3"><i class="fas fa-weight"></i> Calculadora de IMC</a>
+            </div>
+            <div class="col-md-6 mb-3">
+                <a href="ideal-weight-calculator/ideal-weight.html" class="btn btn-success w-100 py-3"><i class="fas fa-ruler-vertical"></i> Calculadora de Peso Ideal</a>
+            </div>
+            <div class="col-md-6 mb-3">
+                <a href="heart-rate-calculator/heart-rate.html" class="btn btn-danger w-100 py-3"><i class="fas fa-heartbeat"></i> Monitor de Frecuencia Cardíaca</a>
+            </div>
+            <div class="col-md-6 mb-3">
+                <a href="blood-pressure-calculator/blood-pressure.html" class="btn btn-info w-100 py-3"><i class="fas fa-thermometer-half"></i> Monitor de Presión Arterial</a>
+            </div>
+            <div class="col-md-6 mb-3">
+                <a href="glucose-calculator/glucose.html" class="btn btn-warning w-100 py-3"><i class="fas fa-syringe"></i> Monitor de Glucosa</a>
+            </div>
+            <div class="col-md-6 mb-3">
+                <a href="calorie-calculator/calorie.html" class="btn btn-secondary w-100 py-3"><i class="fas fa-burn"></i> Calculadora de Calorías</a>
+            </div>
+            <div class="col-md-6 mb-3">
+                <a href="diabetes-calculator/diabetes.html" class="btn btn-tercery w-100 py-3">
+                    <i class="fa-solid fa-hospital-user"></i> Monitoreo de Diabetes</a>
+            </div>
+            <div class="col-md-6 mb-3">
+                <a href="sleep-calculator/sleep.html" class="btn btn-dark w-100 py-3"><i class="fas fa-bed"></i> Calculadora de Sueño</a>
+            </div> 
+
+            <!-- Escala Y-BOCS -->
+            <div class="col-md-6 mb-3">
+                <a href="sleep-calculator/sleep.html" class="btn btn-dark w-100 py-3 EscalaY-BOCS"><i class="fa-solid fa-brain"></i> Escala Y-BOCS (Yale-Brown Obsessive Compulsive Scale) </a>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <a href="sleep-calculator/sleep.html" class="btn btn-dark w-100 py-3 EscalaBAT"><i class="fa-solid fa-brain"></i> Evitación Conductual en Trastorno Obsesivo-Compulsivo (BAT)</a>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <a href="sleep-calculator/sleep.html" class="btn btn-dark w-100 py-3 EscalaOVI"><i class="fa-solid fa-brain"></i> Escala de Ideas Sobrevaluadas (OVI)</a>
+            </div>
+
+
+            <div class="col-md-6 mb-3">
+                <a href="sleep-calculator/sleep.html" class="btn btn-dark w-100 py-3 EscalaCY-BOCSASD"><i class="fa-solid fa-brain"></i> Escala TOC-Autismo (CY- BOCSASD)</a>
+            </div>
+
+            <!-- Pruebas autosuministradas -->
+            
+            <div class="col-md-6 mb-3">
+                <a href="sleep-calculator/sleep.html" class="btn btn-dark w-100 py-3 Pruebas-AutoSum"><i class="fa-solid fa-brain"></i> Pruebas Autosuministradas</a>
+            </div>
+
+            <!-- Detección de tumores en neuroimagenes MRI -->
+             <div class="col-md-6 mb-3">
+                <a href="sleep-calculator/sleep.html" class="btn btn-dark w-100 py-3 DeteccionTumor"><i class="fa-solid fa-brain"></i> Detección de Tumores en Neuroimágen MRI</a>
+            </div>
+    
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-3 mt-5">
+        <div class="container">
+            <p class="text-center">&copy; 2024 Todos los Derechos Reservados | <i class="fa-brands fa-github"></i> 
+                <a href="https://github.com/Jesus-David-Silva-Rangel-19" target="_blank" class="text-white">Jesús David Silva Rangel.</a> <br>
+                <i class="fa-solid fa-laptop-code"></i> NeuroComputing Lab.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

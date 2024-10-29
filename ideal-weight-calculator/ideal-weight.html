@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Peso Ideal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-center text-success mb-4"><i class="fas fa-ruler"></i> Calculadora de Peso Ideal</h1>
+        <p class="text-center text-muted">Ingrese su estatura, edad y género para calcular el peso ideal.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow p-4">
+                    <div class="mb-3">
+                        <label for="height" class="form-label">Estatura (cm)</label>
+                        <input type="number" id="height" class="form-control" placeholder="Ejemplo: 170" min="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="weight" class="form-label">Peso (kg)</label>
+                        <input type="number" id="weight" class="form-control" placeholder="Ejemplo: 70" min="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Edad (años)</label>
+                        <input type="number" id="age" class="form-control" placeholder="Ejemplo: 25" min="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="gender" class="form-label">Género</label>
+                        <select id="gender" class="form-select">
+                            <option value="male">Masculino</option>
+                            <option value="female">Femenino</option>
+                        </select>
+                    </div>
+                    
+                    <button id="calculateIdealWeightBtn" class="btn btn-success w-100 mb-3"><i class="fas fa-calculator"></i> Calcular Peso Ideal</button>
+                    
+                    <!-- Botón de limpiar -->
+                    <button id="clearBtn" class="btn btn-danger w-100 mt-3"><i class="fas fa-broom"></i> Limpiar</button>
+
+                    <!-- Botón de regresar -->
+                    <a href="../index.html" class="btn btn-secondary w-100 mt-3"><i class="fas fa-arrow-left"></i> Regresar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resultado -->
+        <div id="idealWeightResult" class="text-center mt-4">
+            <h2 id="idealWeight" class="text-success"></h2>
+        </div>
+    </div>
+
+       <!-- Footer -->
+       <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <p class="text-center">&copy; 2024 Todos los derechos reservados. <br> 
+                <i class="fa-brands fa-github"></i> 
+                <a href="https://github.com/Jesus-David-Silva-Rangel-19" target="_blank" class="text-white">
+                    Jesús David Silva Rangel.
+                </a> <br> <i class="fa-solid fa-laptop-code"></i> NeuroComputing Lab.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="ideal-weight-script.js"></script>
+</body>
+</html>

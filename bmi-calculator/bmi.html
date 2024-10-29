@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="bmi-style.css">
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-center text-primary mb-4"><i class="fas fa-calculator"></i> Calculadora de IMC</h1>
+        <p class="text-center text-muted">Ingrese su peso y altura para calcular el Índice de Masa Corporal.</p>
+
+        <!-- Formulario de cálculo de IMC -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow p-4">
+                    <div class="mb-3">
+                        <label for="weight" class="form-label">Peso (kg)</label>
+                        <input type="number" id="weight" class="form-control" placeholder="Ejemplo: 70" min="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="height" class="form-label">Altura (m)</label>
+                        <input type="number" id="height" class="form-control" placeholder="Ejemplo: 1.75" step="0.01" min="0">
+                    </div>
+                    <button id="calculateBtn" class="btn btn-primary w-100"><i class="fas fa-chart-line"></i> Calcular IMC</button>
+
+                    <!-- Botón de limpiar -->
+                    <button id="clearBtn" class="btn btn-danger w-100 mt-3"><i class="fas fa-broom"></i> Limpiar</button>
+
+                    <!-- Botón de regresar -->
+                    <a href="../index.html" class="btn btn-secondary w-100 mt-3"><i class="fas fa-arrow-left"></i> Regresar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de resultados -->
+        <div id="resultSection" class="text-center mt-4">
+            <h2 id="result" class="text-success"></h2>
+            <p id="classification" class="text-muted"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <p class="text-center">&copy; 2024 Todos los derechos reservados. <br> 
+                <i class="fa-brands fa-github"></i> 
+                <a href="https://github.com/Jesus-David-Silva-Rangel-19" target="_blank" class="text-white">
+                    Jesús David Silva Rangel.
+                </a> <br> <i class="fa-solid fa-laptop-code"></i> NeuroComputing Lab.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="bmi-script.js"></script>
+</body>
+</html>

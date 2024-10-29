@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet"> <!-- Enlace a la fuente Protest Strike -->
+    <title>Calculadora de Sueño</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .result-panel {
+            display: none; /* Ocultar por defecto */
+            margin-top: 20px;
+        }
+        .card-result {
+            margin: 10px; /* Margen entre tarjetas */
+            padding: 20px; /* Espacio interno aumentado para mejorar la estética */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra más suave para tarjetas */
+            transition: transform 0.2s, box-shadow 0.2s; /* Transición para el efecto hover */
+            position: relative; /* Posición relativa para el uso de la etiqueta */
+            text-align: center; /* Centrar el contenido de las tarjetas */
+            background-color: #ffffff; /* Fondo blanco para las tarjetas */
+        }
+        .card-result:hover {
+            transform: translateY(-5px); /* Efecto de levantamiento al pasar el ratón */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hover */
+        }
+        .recommended {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); /* Degradado verde */
+            border-left: 5px solid #28a745; /* Borde izquierdo verde */
+            color: #155724; /* Color de texto verde oscuro */
+        }
+        .not-recommended {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); /* Degradado rojo */
+            border-left: 5px solid #dc3545; /* Borde izquierdo rojo */
+            color: #721c24; /* Color de texto rojo oscuro */
+        }
+        .wake-up-time {
+            font-family: 'Protest Strike', sans-serif; /* Aplicar fuente a los horarios */
+            font-size: 1.5em; /* Tamaño de fuente aumentado para horarios */
+            font-weight: bold; /* Negrita */
+        }
+        @media (max-width: 576px) {
+            .card-result {
+                margin: 10px; /* Margen reducido en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center text-success mb-4"><i class="fas fa-bed"></i> Calculadora de Sueño</h1>
+        <p class="text-center text-muted">Ingrese la hora de dormir para calcular los horarios recomendados para despertar.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow p-4">
+                    <div class="mb-3">
+                        <label for="sleepTime" class="form-label">Hora de dormir</label>
+                        <input type="time" id="sleepTime" class="form-control" required>
+                    </div>
+                    
+                    <button id="calculateSleepBtn" class="btn btn-success w-100 mb-3"><i class="fas fa-calculator"></i> Calcular Horarios</button>
+                    
+                    <!-- Botón de limpiar -->
+                    <button id="clearBtn" class="btn btn-danger w-100 mt-3"><i class="fas fa-broom"></i> Limpiar</button>
+
+                    <!-- Botón de regresar -->
+                    <a href="../index.html" class="btn btn-secondary w-100 mt-3"><i class="fas fa-arrow-left"></i> Regresar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel de resultados -->
+        <div class="result-panel mt-4" id="resultPanel">
+            <h4 class="text-success" style="text-align: center; font-family: 'Protest Strike'; font-variant: small-caps; font-size: 38px; " >Horarios Recomendados para Despertar:</h4>
+            <div id="wakeUpTimes" class="row justify-content-center"  style="font-variant: small-caps; font-weight: bolder;"></div>
+            <p id="sleepAdvice" class="text-muted text-center" style="font-variant: small-caps; font-weight: bolder;"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <p class="text-center">&copy; 2024 Todos los derechos reservados. <br> 
+                <i class="fa-brands fa-github"></i> 
+                <a href="https://github.com/Jesus-David-Silva-Rangel-19" target="_blank" class="text-white">
+                    Jesús David Silva Rangel.
+                </a> <br> <i class="fa-solid fa-laptop-code"></i> NeuroComputing Lab.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sleep-calculator-script.js"></script>
+</body>
+</html>
